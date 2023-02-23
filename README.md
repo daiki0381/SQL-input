@@ -18,3 +18,9 @@ SELECT * FROM kimetsu;
 ```
 SELECT DISTINCT(kokyu) FROM kimetsu;
 ```
+
+- エヴァテーブル(eva)の可愛いカラム(kawaii)が5より大きいレコードの名前カラム(name)と可愛いカラム(kawaii)を取得
+
+```
+SELECT name, kawaii FROM eva WHERE kawaii > 5;
+```
