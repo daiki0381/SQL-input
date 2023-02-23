@@ -61,3 +61,9 @@ SELECT * FROM eva WHERE name LIKE 'ア%';
 ```
 SELECT * FROM eva WHERE role IS NULL;
 ```
+
+- エヴァテーブル(eva)のレコードを2行のみ取得
+
+```
+SELECT * FROM eva LIMIT 2;
+```
