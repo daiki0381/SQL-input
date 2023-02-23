@@ -1,5 +1,7 @@
 # SQLの基本
 
+<img width="956" alt="スクリーンショット 2023-02-23 23 13 51" src="https://user-images.githubusercontent.com/98577773/220932659-b4121a54-987c-4684-9be0-e85b988ec3b1.png">
+
 - 鬼滅テーブル(kimetsu)の名前カラム(name)と特徴カラム(feature)を取得
 
 ```
@@ -82,6 +84,8 @@ SELECT * FROM eva ORDER BY kawaii DESC;
 
 # GROUP BY
 
+<img width="603" alt="スクリーンショット 2023-02-23 23 14 13" src="https://user-images.githubusercontent.com/98577773/220932721-da4a1b3a-4922-4499-8672-980a73f1a051.png">
+
 - メンバー会員テーブル(members)の2021-02-13の会員登録数を取得
 
 ```
@@ -107,6 +111,8 @@ SELECT created_day, COUNT(name), AVG(age), MAX(age) FROM members GROUP BY create
 ```
 
 # テーブル結合
+
+<img width="714" alt="スクリーンショット 2023-02-23 23 14 34" src="https://user-images.githubusercontent.com/98577773/220932731-d7d28093-3ab6-472f-9ff9-b76d6261fed1.png">
 
 - martiansテーブルの主キーとhistoriesテーブルの外部キーを結合して取得 (条件にマッチしなければ除外)
 
