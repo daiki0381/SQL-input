@@ -36,3 +36,9 @@ SELECT * FROM eva WHERE kawaii > 5 AND role = "パイロット";
 ```
 SELECT * FROM eva WHERE kawaii > 5 OR role = "パイロット";
 ```
+
+- エヴァテーブル(eva)の可愛いカラム(kawaii)が4〜6のレコードを取得
+
+```
+SELECT * FROM eva WHERE kawaii BETWEEN 4 AND 6;
+```
