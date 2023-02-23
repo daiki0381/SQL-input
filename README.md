@@ -140,8 +140,16 @@ SELECT martians.name, histories.planet FROM martians LEFT OUTER JOIN histories O
 
 # サブクエリ
 
+<img width="604" alt="スクリーンショット 2023-02-23 23 24 25" src="https://user-images.githubusercontent.com/98577773/220938890-94ef1ca3-0ed1-49af-807f-67af585fe889.png">
+
 - itemsテーブルの平均価格以上のレコードを取得
 
 ```
 SELECT * FROM items WHERE price >= (SELECT AVR(price) FROM items);
+```
+
+- itemsテーブルのカテゴリーカラム(category)毎に平均価格以上のレコードを取得
+
+```
+SELECT * FROM items AS items1 WHERE price >= (SELECT AVR(price) FROM items AS items2 WHERE items1.category = items2.category GROUP BY category);
 ```
