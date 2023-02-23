@@ -49,3 +49,9 @@ SELECT * FROM eva WHERE kawaii BETWEEN 4 AND 6;
 SELECT * FROM eva WHERE role = 'パイロット' OR role = '作戦部長';
 SELECT * FROM eva WHERE role IN ('パイロット', '作戦部長');
 ```
+
+- エヴァテーブル(eva)の名前カラム(name)が「ア」から始まるレコードを取得
+
+```
+SELECT * FROM eva WHERE name LIKE 'ア%';
+```
