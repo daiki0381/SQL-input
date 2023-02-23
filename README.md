@@ -67,3 +67,15 @@ SELECT * FROM eva WHERE role IS NULL;
 ```
 SELECT * FROM eva LIMIT 2;
 ```
+
+- エヴァテーブル(eva)の可愛いカラム(kawaii)の昇順で取得
+
+```
+SELECT * FROM eva ORDER BY kawaii;
+```
+
+- エヴァテーブル(eva)の可愛いカラム(kawaii)の降順で取得
+
+```
+SELECT * FROM eva ORDER BY kawaii DESC;
+```
