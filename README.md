@@ -28,17 +28,24 @@ SELECT name, kawaii FROM eva WHERE kawaii > 5;
 - エヴァテーブル(eva)の可愛いカラム(kawaii)が5より大きいand役割カラム(role)がパイロットのレコードを取得
 
 ```
-SELECT * FROM eva WHERE kawaii > 5 AND role = "パイロット";
+SELECT * FROM eva WHERE kawaii > 5 AND role = 'パイロット';
 ```
 
-- エヴァテーブル(eva)の可愛いカラム(kawaii)が5より大きいor役割カラム(role)がパイロットのレコードを取得
+- エヴァテーブル(eva)の可愛いカラム(kawaii)が5より大きいor役職カラム(role)がパイロットのレコードを取得
 
 ```
-SELECT * FROM eva WHERE kawaii > 5 OR role = "パイロット";
+SELECT * FROM eva WHERE kawaii > 5 OR role = 'パイロット';
 ```
 
 - エヴァテーブル(eva)の可愛いカラム(kawaii)が4〜6のレコードを取得
 
 ```
 SELECT * FROM eva WHERE kawaii BETWEEN 4 AND 6;
+```
+
+- エヴァテーブル(eva)の役職カラム(role)がパイロットか作戦部長のレコードを取得
+
+```
+SELECT * FROM eva WHERE role = 'パイロット' OR role = '作戦部長';
+SELECT * FROM eva WHERE role IN ('パイロット', '作戦部長');
 ```
