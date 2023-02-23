@@ -55,3 +55,9 @@ SELECT * FROM eva WHERE role IN ('パイロット', '作戦部長');
 ```
 SELECT * FROM eva WHERE name LIKE 'ア%';
 ```
+
+- エヴァテーブル(eva)の役職カラム(role)がNULLのレコードを取得
+
+```
+SELECT * FROM eva WHERE role IS NULL;
+```
