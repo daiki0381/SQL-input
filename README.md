@@ -79,3 +79,29 @@ SELECT * FROM eva ORDER BY kawaii;
 ```
 SELECT * FROM eva ORDER BY kawaii DESC;
 ```
+
+# GROUP BY
+
+- メンバー会員テーブル(members)の2021-02-13の会員登録数を取得
+
+```
+SELECT COUNT(name) FROM members WHERE created_day = '2021-02-13';
+```
+
+- メンバー会員テーブル(members)の日毎の会員登録数を取得
+
+```
+SELECT created_day, COUNT(name) FROM members GROUP BY created_day; // created_dayの同じ値をまとめる
+```
+
+- メンバー会員テーブル(members)の日毎のチャネル(ad, web)ごとの会員登録数を取得
+
+```
+SELECT created_day, channel, COUNT(name) FROM members GROUP BY created_day, channel;
+```
+
+- メンバー会員テーブル(members)の日毎の会員登録数と平均年齢と最大年齢を取得
+
+```
+SELECT created_day, COUNT(name), AVG(age), MAX(age) FROM members GROUP BY created_day;
+```
