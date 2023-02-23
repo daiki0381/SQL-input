@@ -24,3 +24,15 @@ SELECT DISTINCT(kokyu) FROM kimetsu;
 ```
 SELECT name, kawaii FROM eva WHERE kawaii > 5;
 ```
+
+- エヴァテーブル(eva)の可愛いカラム(kawaii)が5より大きいand役割カラム(role)がパイロットのレコードを取得
+
+```
+SELECT * FROM eva WHERE kawaii > 5 AND role = "パイロット";
+```
+
+- エヴァテーブル(eva)の可愛いカラム(kawaii)が5より大きいor役割カラム(role)がパイロットのレコードを取得
+
+```
+SELECT * FROM eva WHERE kawaii > 5 OR role = "パイロット";
+```
