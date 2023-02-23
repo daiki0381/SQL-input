@@ -105,3 +105,29 @@ SELECT created_day, channel, COUNT(name) FROM members GROUP BY created_day, chan
 ```
 SELECT created_day, COUNT(name), AVG(age), MAX(age) FROM members GROUP BY created_day;
 ```
+
+# テーブル結合
+
+- martiansテーブルの主キーとhistoriesテーブルの外部キーを結合して取得 (条件にマッチしなければ除外)
+
+```
+SELECT * FROM martians INNER JOIN histories ON martians.id = histories.martians_id;
+```
+
+- martiansテーブルの主キーとhistoriesテーブルの外部キーを結合してmartiansテーブルの名前カラム(name)とhistoriesテーブルの惑星カラム(planet)を取得 (条件にマッチしなければ除外)
+
+```
+SELECT martians.name, histories.planet FROM martians INNER JOIN histories ON martians.id = histories.martians_id;
+```
+
+- martiansテーブルの主キーとhistoriesテーブルの外部キーを結合して取得
+
+```
+SELECT * FROM martians  LEFT OUTER JOIN histories ON martians.id = histories.martians_id;
+```
+
+- martiansテーブルの主キーとhistoriesテーブルの外部キーを結合してmartiansテーブルの名前カラム(name)とhistoriesテーブルの惑星カラム(planet)を取得
+
+```
+SELECT martians.name, histories.planet FROM martians LEFT OUTER JOIN histories ON martians.id = histories.martians_id;
+```
