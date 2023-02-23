@@ -137,3 +137,11 @@ SELECT * FROM martians  LEFT OUTER JOIN histories ON martians.id = histories.mar
 ```
 SELECT martians.name, histories.planet FROM martians LEFT OUTER JOIN histories ON martians.id = histories.martians_id;
 ```
+
+# サブクエリ
+
+- itemsテーブルの平均価格以上のレコードを取得
+
+```
+SELECT * FROM items WHERE price >= (SELECT AVR(price) FROM items);
+```
