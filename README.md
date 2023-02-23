@@ -1,4 +1,4 @@
-# SQLの基本
+## SQLの基本
 
 <img width="956" alt="スクリーンショット 2023-02-23 23 13 51" src="https://user-images.githubusercontent.com/98577773/220932659-b4121a54-987c-4684-9be0-e85b988ec3b1.png">
 
@@ -82,7 +82,7 @@ SELECT * FROM eva ORDER BY kawaii;
 SELECT * FROM eva ORDER BY kawaii DESC;
 ```
 
-# GROUP BY
+## GROUP BY
 
 <img width="603" alt="スクリーンショット 2023-02-23 23 14 13" src="https://user-images.githubusercontent.com/98577773/220932721-da4a1b3a-4922-4499-8672-980a73f1a051.png">
 
@@ -110,7 +110,7 @@ SELECT created_day, channel, COUNT(name) FROM members GROUP BY created_day, chan
 SELECT created_day, COUNT(name), AVG(age), MAX(age) FROM members GROUP BY created_day;
 ```
 
-# テーブル結合
+## テーブル結合
 
 <img width="714" alt="スクリーンショット 2023-02-23 23 14 34" src="https://user-images.githubusercontent.com/98577773/220932731-d7d28093-3ab6-472f-9ff9-b76d6261fed1.png">
 
